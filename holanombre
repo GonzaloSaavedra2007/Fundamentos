@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string nombre;
+    cout<<"Ingresar tu nombre: " ;
+    cin>>nombre;
+    cout<<endl<<"****************************: ";
+    cout<<endl<<"*       Hola"<<nombre<<"   *: ";
+    cout<<endl<<"****************************: ";
+    return 0;
+}
