@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    float cicunferencia, area, volumen, diametro, radio;
+    float circunferencia, area, volumen, diametro, radio;
     cout<<"Ingresa el diametro de la esfera: ";
     cin>> diametro;
     radio=diametro/2.0;
@@ -11,6 +11,6 @@ int main()
     area=3.14159*diametro*diametro;
     volumen=(4.0/3.0)*3.14159*radio*radio*radio;
     cout<<"circunferencia: "<<circunferencia<<endl;
-    cout<<"area: "<<area<<endl<<;
+    cout<<"area: "<<area<<endl;
     cout<<"volumen: "<<volumen<<endl;
 }
