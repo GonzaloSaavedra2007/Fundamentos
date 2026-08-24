@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    float nota1, nota2, nota3, sumanotas, notaf40, examenfinal, notapractica, notafinal;
+    cout<<"Ingrese la nota1: ";
+    cin>>nota1;
+    cout<<"Ingrese la nota2: ";
+    cin>>nota2;
+    cout<<"Ingrese la nota3: ";
+    cin>>nota3;
+    sumanotas=nota1+nota2+nota3;
+    notaf40=(sumanotas/300.0)*40.0;
+    cout<<"Ingrese la nota del examenfinal: ";
+    cin>>examenfinal;
+    examenfinal=(examenfinal/100.0)*40.0;
+    cout<<"Ingrese la notapractica: ";
+    cin>>notapractica;
+    notapractica=(notapractica/100.0)*20.0;
+    notafinal=notaf40+examenfinal+notapractica;
+    cout<<"notaparciales: "<<notaf40<<endl;
+    cout<<"notafinal: "<<notafinal<<endl;
+    return 0;
+}
