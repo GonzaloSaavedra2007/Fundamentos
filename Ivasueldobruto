@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+string nombretrabajador;
+double horastrabajadas, preciohora, salariobruto, salarioneto;
+double IVA=0.13;
+double impuesto=0.0;
+cout<<"Ingrese el nombre del trabajador: ";
+cin>>nombretrabajador;
+cout<<"Ingrese las horas trabajadas: ";
+cin>>horastrabajadas;
+cout<<"Ingrese el preciohora: ";
+cin>>preciohora;
+salariobruto=horastrabajadas*preciohora;
+if (salariobruto>8272){
+impuesto= salariobruto*IVA;
+}
+salarioneto= salariobruto-impuesto;
+cout<<"Trabajador: "<<nombretrabajador<<endl;
+cout<<"salario bruto: "<<salariobruto<<"Bs"<<endl;
+cout<<"descuento IVA(13%): "<<impuesto<<"Bs"<<endl;
+cout<<"salarioneto a pagar: "<<salarioneto<<"Bs"<<endl;
+return 0;
+} 
