@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, c;
+    float p;
+    cout<<"Ingresar 3 valores en rango de 0 a 10: ";
+    cout<<"Ingresar el primer valor: ";
+    cin>>a;
+    cout<<"Ingresar el segundo valor: ";
+    cin>>b,
+    cout<<"Ingresar el tercer valor: ";
+    cin>>c;
+    if ((a>=0) && (a<=10))
+          if ((b>=0) && (b<=10))
+                 if ((c>=0) && (c<=10)){
+                       p=(a+b+c)/3;
+                       cout<<"El promedio es: "<<p;}
+                 else 
+                 cout<<"Error c no cumple : "<<endl;
+          else
+              cout<<"Error b no cumple: "<<endl;
+    else
+        cout<<"Error a no cumple: "<<endl;
+    return 0;
+}
