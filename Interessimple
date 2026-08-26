@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+   double capital, interes, n, montofinal;
+   double tasainteres=0.07;
+   cout<<"Ingresar el capital: ";
+   cin>>capital;
+   cout<<"Ingresar el valor de n: ";
+   cin>>n;
+   interes=capital*(0.07)*n;
+   montofinal=capital+interes;
+   cout<<"El interes ganado es: "<<interes<<"Bs"<<endl;
+   cout<<"El monto final es: "<<montofinal<<"Bs"<<endl;
+return 0;
+} 
