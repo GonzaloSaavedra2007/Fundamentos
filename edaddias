@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int dn, mn, an;
+    int da, ma, aa;
+    cout << "Escribir fecha de nacimiento (dia mes anio): ";
+    cin >> dn >> mn >> an;
+    cout << "Escribir fecha actual (dia mes anio): ";
+    cin >> da >> ma >> aa;
+    // Validar meses
+    if (mn < 1 || mn > 12 || ma < 1 || ma > 12) {
+        cout << "Fechas incorrectas." << endl;
+        return 0;
+    }
+    // Calcular dias del mes de nacimiento
+    int diasN = 31;
+    if (mn == 4 || mn == 6 || mn == 9 || mn == 11) diasN = 30;
+    if (mn == 2) {
+        if ((an % 4 == 0 && an % 100 != 0) || (an % 400 == 0)) diasN = 29;
+        else diasN = 28;
+    }
+    // Calcular dias del mes actual
+    int diasA = 31;
+    if (ma == 4 || ma == 6 || ma == 9 || ma == 11) diasA = 30;
+    if (ma == 2) {
+        if ((aa % 4 == 0 && aa % 100 != 0) || (aa % 400 == 0)) diasA = 29;
+        else diasA = 28;
+    }
+    // Validar dias
+    if (dn < 1 || dn > diasN || da < 1 || da > diasA) {
+        cout << "Fechas incorrectas." << endl;
+        return 0;
+    }
+    // Calcular dias aproximados considerando años de 365.25 dias
+    long totalN = an * 365.25 + mn * 30.4 + dn;
+    long totalA = aa * 365.25 + ma * 30.4 + da;
+
+    if (totalA < totalN) {
+        cout << "Fechas incorrectas." << endl;
+    } else {
+        cout << "Su edad en dias es: " << (totalA - totalN) << endl;
+    }
+    return 0;
+}
