@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+    {
+        string c;
+        do {
+            int Num, D, Suma = 0;
+
+            do {
+                cout << "Ingrese el numero: " << endl;
+                cin >> Num;
+            } while (Num < 0);
+
+            while (Num != 0) {
+                D = Num % 10;
+                Suma = Suma + D;
+                Num = Num / 10;
+            }
+
+            cout << "La suma es: " << Suma << endl;
+
+            cout << "Desea ingresar otro numero? (s/n): ";
+            cin >> c;
+
+        } while (c == "s" || c == "S");
+
+        cout << endl << "Programa terminado" << endl;
+
+        return 0;
+}
