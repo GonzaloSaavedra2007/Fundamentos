@@ -10,7 +10,7 @@ float totalapagar(int cantidad, float precio);
 int main()
 {
     int edad, nota;
-    float a;
+    float a, b, total;
     int opcion;
     //Menu
     do {
@@ -20,7 +20,7 @@ int main()
         // Condicional multiple
         switch (opcion)
         {
-            case 1;
+        case 1:
                 //Utilizar una funcion con void
                 cout << "Ingrese la edad: ";
                 cin >> edad;
